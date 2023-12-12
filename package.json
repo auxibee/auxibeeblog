@@ -1,0 +1,19 @@
+{
+  "name": "auxibeeblog",
+  "version": "1.0.0",
+  "description": "A blog application for my profile",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "sequelize"
+  ],
+  "author": "Yaw Twumasi Acheampong",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
