@@ -1,21 +1,16 @@
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Docker compose reference guide at
-# https://docs.docker.com/compose/compose-file/
-
-# Here the instructions define your application as a service called "server".
-# This service is built from the Dockerfile in the current directory.
-# You can add other services your application may depend on here, such as a
-# database or a cache. For examples, see the Awesome Compose repository:
-# https://github.com/docker/awesome-compose
 services:
-  frontend:
+  backend:
     build:
       context: .
     container_name: auxibee_blog
     restart: unless-stopped
     environment:
       NODE_ENV: production
-
+  frontend:
+    build:
+      context: ./frontend
+    container_name: frontend
+    restart: unless-stopped
   caddy:
     image: caddy/caddy:2.1.1-alpine
     container_name: caddy-service
