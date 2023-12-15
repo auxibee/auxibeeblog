@@ -7,4 +7,4 @@ app.get('/', async (req, res) => {
 })
 
 
-app.listen(8080, () => console.log('server started listening'))
+app.listen(8080, "0.0.0.0", () => console.log('server started listening'))
