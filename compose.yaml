@@ -11,6 +11,8 @@ services:
       context: ./frontend
     container_name: frontend
     restart: unless-stopped
+    depends_on:
+      - backend
 
   caddy:
     image: caddy/caddy:2.1.1-alpine
