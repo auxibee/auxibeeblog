@@ -11,6 +11,7 @@ services:
       context: ./frontend
     container_name: frontend
     restart: unless-stopped
+
   caddy:
     image: caddy/caddy:2.1.1-alpine
     container_name: caddy-service
@@ -18,6 +19,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
+      - "8000:2080"
     volumes:
       - $PWD/Caddyfile:/etc/caddy/Caddyfile
       - $PWD/site:/srv

@@ -1,7 +1,9 @@
-
 auxibee.dev {
-  
-  reverse_proxy frontend:3000  {
-    header_down Strict-Transport-Security max-age=31536000;
-   }
+  route /* {
+          reverse_proxy frontend:3000
+  }
+  route /api/* {
+    uri strip_prefix /api
+    reverse_proxy backend:8080
+  }
 }
