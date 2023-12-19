@@ -1,9 +1,12 @@
 auxibee.dev {
-  route /* {
-          reverse_proxy frontend:3000
-  }
+  root * /var/www/mysite
+  file_server
+  
   route /api/* {
     uri strip_prefix /api
     reverse_proxy backend:8080
   }
 }
+
+#for production
+#replace :2080 with auxibee.dev

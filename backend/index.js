@@ -6,8 +6,8 @@ app.get('/', async (req, res) => {
     res.json({ message: 'Website is under construction.....' })
 })
 
-app.get('/names', async (req, res) => {
-    res.json({ username: 'yaw twumasi', email: 'auxibee@gmail.com' })
+app.get('/users', async (req, res) => {
+    res.json({ username: 'yaw twumasi acheampong', email: 'auxibee@gmail.com' })
 })
 
 
