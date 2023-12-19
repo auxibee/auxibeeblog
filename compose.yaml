@@ -13,7 +13,31 @@ services:
 
     container_name: frontend
     ports:
-      - 8000:2080
+      - "8000:2080"
+      - "443:443"
+      - "80:80"
+    # depends_on:
+    #   - backend
+
+  #   volumes:
+  #     - ./frontend/src:/usr/src/app/src
+#   caddy:
+#     image: caddy/caddy:2.1.1-alpine
+#     container_name: caddy-service
+#     restart: unless-stopped
+#     ports:
+#       - "80:80"
+#       - "443:443"
+#       - "8000:2080"
+#     volumes:
+#       - $PWD/Caddyfile:/etc/caddy/Caddyfile
+#       - $PWD/frontend/build:/var/www/mysite
+#       - $PWD/site:/srv
+#       - caddy_data:/data
+#       - caddy_config:/config
+# volumes:
+#   caddy_data:
+#   caddy_config:
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
 # start the database before your application. The `db-data` volume persists the
